@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'CleaningService.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'tuya$Klean',
+        'USER': 'tuya',
+        'PASSWORD': 'tuyadatabases',
+        'HOST': 'tuya.mysql.pythonanywhere-services.com',
+        'PORT': '3306',
     }
 }
 
