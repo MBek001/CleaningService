@@ -5,6 +5,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -419,6 +420,41 @@ h6, .h6 {
   font-size: 1.25rem;
   font-weight: 300;
 }
+
+.referral-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+/* Input and Button Styles */
+#referral-link {
+    width: 100%;
+}
+
+.btn-copy-code {
+    cursor: pointer;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+
+
+
 
 .display-1 {
   font-size: 6rem;

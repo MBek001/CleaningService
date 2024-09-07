@@ -8,7 +8,7 @@
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
 
-    <!-- Favicon -->
+    <!-- Favicon -->    
     <link href="{% static 'img/favicon.ico' %}" rel="icon" />
 
     <!-- Google Web Fonts -->
@@ -132,15 +132,16 @@
       </div>
     </div>
     <!-- Page Header End -->
-    
-<!-- Referral Detail Start -->
+     
+     
+ <!-- Correct HTML Structure -->
 <div class="container py-5">
     <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
+        <div class="col-md-10 col-lg-8">
             <div class="referral-box bg-light p-4 rounded">
                 <h2 class="text-center mb-4">Referral Program</h2>
-
-                <!-- Referral Link Generation -->
+                
+                <!-- Generate Referral Link -->
                 <div class="mb-4">
                     <h3>Generate Referral Link</h3>
                     <form method="POST" action="{% url 'referral' %}">
@@ -151,43 +152,47 @@
                         <div class="mt-3">
                             <p>Your referral link:</p>
                             <input type="text" id="referral-link" class="form-control" value="{{ referral_link }}" readonly>
-                            <button class="btn btn-secondary btn-copy-code" onclick="copyToClipboard()" style="margin-top: 10px;">Copy Code</button>
+                            <button class="btn btn-secondary btn-copy-code mt-2" onclick="copyToClipboard()">Copy Code</button>
                             <small class="form-text text-muted">Share this link with your friends to invite them.</small>
                         </div>
                     {% endif %}
                 </div>
 
-                <!-- Referred Users List -->
+               <!-- Referred Users List -->
                 <div>
                     <h3>Users You Have Referred</h3>
                     {% if referred_users %}
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th> Username</th>
-                                    <th> Email</th>
-                                    <th> Registered</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for referred in referred_users %}
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
                                     <tr>
-                                        <td>{{ referred.user.username }}</td>
-                                        <td>{{ referred.user.email }}</td>
-                                        <td>{{ referred.date_invited|date:"F j, Y" }}</td>
+                                        <th>Username</th>
+                                        <th>Email</th>
+                                        <th>Registered</th>
                                     </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    {% for referred in referred_users %}
+                                        <tr>
+                                            <td>{{ referred.user.username }}</td>
+                                            <td>{{ referred.user.email }}</td>
+                                            <td>{{ referred.date_invited|date:"F j, Y" }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
                     {% else %}
-                        <p>You haven't referred any users yet.</p>
+                        <p class="text-center">You haven't referred any users yet.</p>
                     {% endif %}
                 </div>
+
             </div>
         </div>
     </div>
 </div>
-<!-- Referral Detail End -->
+
+
 
                     
 
