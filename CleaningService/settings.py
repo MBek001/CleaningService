@@ -29,7 +29,9 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'tuya.pythonanywhere.com',
-    'testserver'
+    'testserver',
+    'www.erixcleaning.com',
+    'erixcleaning.com'
 ]
   # Include other hosts you use
 
